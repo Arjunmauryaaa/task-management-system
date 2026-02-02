@@ -1,156 +1,28 @@
-Task Management System (MERN Stack)
-Project Overview
+Task Management System – Setup Guide
+ Prerequisites
 
-The Task Management System is a full-stack web application built using the MERN stack (MongoDB, Express.js, React, Node.js).
-It allows authenticated users to create and manage projects and tasks with proper authentication, authorization, and data validation.
+Make sure you have the following installed:
 
-This project demonstrates secure JWT-based authentication, protected routes, RESTful API design, and React state management, making it suitable for an intermediate-level MERN internship assignment.
+Node.js (v16+ recommended)
 
-Core Features
-Authentication & Security
+MongoDB (local via MongoDB Compass)
 
-User Registration, Login, Logout using JWT
+Git
 
-Password hashing using bcrypt
+npm
 
-Protected backend routes using authentication middleware
-
-Protected frontend routes using React Router
-
-JWT stored securely in browser storage
-
- User Profile
-
-View logged-in user profile (name & email)
- Project Management (CRUD)
-
-Create projects
-
-View user-specific projects
-
-Update project details
-
-Delete projects
-
-Task Management (CRUD)
-
-Create tasks under a project
-
-View tasks for a project
-
-Update tasks
-
-Delete tasks
-
-Task Status:
-
-Todo
-
-In Progress
-
-Done
-
-Task Priority:
-
-Low
-
-Medium
-
-High
-
-Dashboard
-
-Displays list of user projects
-
-Project-wise task management
-
-Clean and minimal user interface
-
-🛠 Tech Stack
-Frontend
-
-React
-
-React Router DOM
-
-React Hooks
-
-Axios
-
-CSS
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB
-
-Mongoose
-
-JWT (jsonwebtoken)
-
-bcryptjs
-
-🗃 Database Models
-User Model
-{
-  name: String,
-  email: String,
-  password: String,
-  role: String
-}
-
-Project Model
-{
-  title: String,
-  description: String,
-  owner: ObjectId,
-  createdAt: Date
-}
-
-Task Model
-{
-  title: String,
-  description: String,
-  status: "Todo | In Progress | Done",
-  priority: "Low | Medium | High",
-  dueDate: Date,
-  project: ObjectId,
-  assignedTo: ObjectId
-}
-
-📡 API Documentation
-Authentication
-Method	Endpoint	Description
-POST	/api/auth/register	Register new user
-POST	/api/auth/login	Login user
-Projects
-Method	Endpoint	Description
-GET	/api/projects	Get all user projects
-POST	/api/projects	Create project
-PUT	/api/projects/:id	Update project
-DELETE	/api/projects/:id	Delete project
-Tasks
-Method	Endpoint	Description
-GET	/api/tasks/:projectId	Get tasks for project
-POST	/api/tasks	Create task
-PUT	/api/tasks/:id	Update task
-DELETE	/api/tasks/:id	Delete task
 ⚙️ Environment Variables
-.env.example
+
+Create a .env file inside the backend folder.
+
+backend/.env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/task_management_db
 JWT_SECRET=your_jwt_secret_key
 
-
- Do NOT commit .env to GitHub.
-Only .env.example is included.
-
- Installation & Setup
-1️⃣ Clone Repository
-git clone https://github.com/your-username/task-management-system.git
+Installation & Run Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/Arjunmauryaaa/task-management-system
 cd task-management-system
 
 2️⃣ Backend Setup
@@ -159,56 +31,35 @@ npm install
 npm run dev
 
 
-Backend runs on:
+Backend will run at:
 
 http://localhost:5000
 
 3️⃣ Frontend Setup
+
+Open a new terminal:
+
 cd frontend
 npm install
 npm run dev
 
 
-Frontend runs on:
+Frontend will run at:
 
 http://localhost:5173
 
-How to Run & Test
+How to Use the Application
+
+Open http://localhost:5173
 
 Register a new user
 
-Login to receive JWT token
+Login with credentials
 
-Create a project from dashboard
+Create projects from the dashboard
 
-Open project to manage tasks
+Open a project to manage tasks
 
 Create, update, and delete tasks
 
-Change task status and priority
-
-Logout and verify protected routes
-
-Submission Requirements Checklist
-
-GitHub repository
-
-MERN Stack implementation
-
-JWT authentication
-
-Password hashing
-
-Protected routes (frontend & backend)
-
-Project & Task CRUD
-
-Task status & priority
-
-.env.example
-
-README documentation
-
-API documentation
-
-
+Logout to test protected routes
