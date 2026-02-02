@@ -1,5 +1,5 @@
-Task Management System – Setup Guide
- Prerequisites
+📝 Task Management System – Setup Guide
+📦 Prerequisites
 
 Make sure you have the following installed:
 
@@ -20,7 +20,7 @@ PORT=5000
 MONGO_URI=mongodb://localhost:27017/task_management_db
 JWT_SECRET=your_jwt_secret_key
 
-Installation & Run Instructions
+ Installation & Run Instructions
 1️⃣ Clone the Repository
 git clone https://github.com/Arjunmauryaaa/task-management-system
 cd task-management-system
@@ -48,7 +48,7 @@ Frontend will run at:
 
 http://localhost:5173
 
-How to Use the Application
+ How to Use the Application
 
 Open http://localhost:5173
 
